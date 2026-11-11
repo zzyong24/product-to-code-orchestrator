@@ -14,7 +14,7 @@
 
 ## 糯米饭：借鉴依赖方向和宿主装配
 
-本次只读本机 `/Users/zyongzhu/Workbase/nomifun-desktop`，HEAD `e27bd5de`；本地工作树可能包含改动，该 HEAD 不是所有读取内容均已提交的证明。以下路径用于复查，不是新项目运行依赖。
+本次只读本机 `nomifun-desktop` 本地源码快照，HEAD `e27bd5de`；本地工作树可能包含改动，该 HEAD 不是所有读取内容均已提交的证明。以下路径用于复查，不是新项目运行依赖。
 
 - `crates/backend/nomifun-ai-agent/src/factory/mod.rs`：工厂根据配置选择 Pi/Codex；`CompanionSummonProvider` 由上层注入。值得借鉴的是用接口给下层所需能力，避免引入上层业务模块形成环。
 - `crates/backend/nomifun-ai-agent/src/factory/pi.rs`、`codex.rs`：各自准备内核配置、执行路径与 Skills 环境。可迁移为一个产品执行 port 加选定内核 adapter；第一版只需实现被选中的那个。

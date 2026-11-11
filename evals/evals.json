@@ -1,0 +1,24 @@
+{
+  "skill_name": "product-to-code-orchestrator",
+  "evaluation_mode": "manual",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "在指定的陌生空格路径中初始化一个本地日期待办产品，范围S、单项目。",
+      "expected_output": "先定位产品目录，完成明确规模与拓扑初始化；读取固定规则；不伪造业务验收，不默认正式审核。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "把已初始化项目搬到新目录，在本机原skill路径不可用时继续PLAN与BUILD。",
+      "expected_output": "从项目固定规则包读取，诊断搬迁后的宿主入口；不静默切换到全局新版规则。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "已有项目的更新中断了。请恢复，保留我定制过的hook和配置。",
+      "expected_output": "先核对引擎基线与规则包；缺失或修改时明确失败并给迁移候选；保留定制与历史备份，不误报完成。",
+      "files": []
+    }
+  ]
+}
