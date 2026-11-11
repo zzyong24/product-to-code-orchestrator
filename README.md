@@ -7,6 +7,7 @@
 <p align="center">把产品想法推进为可运行、可验证的代码，只加载当前任务需要的规则。</p>
 
 <p align="center">
+  <a href="https://zzyong24.github.io/product-to-code-orchestrator/">交互架构图</a> ·
   <a href="SKILL.md">Skill 使用说明</a> ·
   <a href="docs/user-guide.zh-CN.md">实操教程</a> ·
   <a href="docs/skill-file-map.zh-CN.md">文件地图</a> ·
@@ -30,6 +31,16 @@
 ```text
 产品目标 → 最小合同 → 结构草图 → 实现 → 聚焦测试 → 真实集成 → 验收
 ```
+
+## 架构全景：一个想法如何走到交付
+
+[![产品开发编排闭环全景图](docs/assets/orchestrator-loop.png)](https://zzyong24.github.io/product-to-code-orchestrator/)
+
+[打开交互版，点击节点查看说明](https://zzyong24.github.io/product-to-code-orchestrator/) · [按步骤读懂这张图](docs/architecture.md) · [HTML 源文件](docs/assets/orchestrator-loop.html)
+
+从上到下读三层：**顶层五阶段**把目标变成可验收的产品合同；**中层 Agent 循环**按“取任务 → 读上下文 → 实现 → 验证 → 落账”持续推进；**底层经验回流**只把已确认、可复现的问题固化为测试或守卫。右侧是需要用户作出高影响选择的边界。
+
+绿色路径是默认交付循环。`buildout` 直接走实现与验收，琥珀色评审分支仅在 `maintenance` 的适用条件下进入；并行 Worker 和双评审运行器也按项目与宿主能力启用。快速审计不代替完整项目验证。
 
 ## 安装
 
