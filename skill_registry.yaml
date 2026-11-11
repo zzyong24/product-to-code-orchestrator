@@ -1,0 +1,28 @@
+# 外部方法参考目录；不是安装清单，不会自动加载或调用。
+# 使用前核对当前宿主能力；只有相关任务需要时读取对应上游。
+# 外部方法不覆盖当前用户授权、项目定义或本脚手架的阶段规则。
+superpowers:
+  ref: "https://github.com/obra/superpowers"
+  purpose: "需求澄清、可执行计划、定位根因和完成前验证的方法参考。"
+  boundary_rules: "不继承逐步审批、强制委派、提交或额外计划文档要求。"
+  fallback: "本地 workflows/、gates/13-tdd-gate.md 和现有任务记录。"
+spec-kit:
+  ref: "https://github.com/github/spec-kit"
+  purpose: "面向用户场景的规格与验收结构参考。"
+  boundary_rules: "不引入第二套范围、任务账本或钩子运行器。"
+  fallback: "templates/PRODUCT_SPEC_TEMPLATE.md 与 SERVICE_CONTRACT_TEMPLATE.md。"
+agents-md:
+  ref: "https://agents.md"
+  purpose: "简短的项目执行入口与专有约定。"
+  boundary_rules: "不把产品历史和通用最佳实践堆入常驻入口。"
+  fallback: "AGENTS_TEMPLATE.md。"
+bmad:
+  ref: "https://github.com/bmad-code-org/BMAD-METHOD"
+  purpose: "阶段职责和产物交接的参考。"
+  boundary_rules: "不导入角色菜单、独立运行时或平行的产品权威。"
+  fallback: "prompts/stage-router.md 与当前阶段流程。"
+playwright:
+  ref: "https://github.com/microsoft/playwright-mcp"
+  purpose: "真实浏览器旅程和状态检查的方法参考。"
+  boundary_rules: "工具可用性由宿主决定，不因未安装 MCP 就强制安装。"
+  fallback: "项目已有浏览器测试或宿主浏览器工具。"

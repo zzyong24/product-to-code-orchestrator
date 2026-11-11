@@ -1,0 +1,9 @@
+{
+  "name": "@orchestrator/assets",
+  "private": true,
+  "type": "module",
+  "description": "可复用资产库子树。example-as-test 用 node:test 跑(零运行时依赖,不拉 @aws-sdk/@anthropic-ai/vitest)。",
+  "scripts": {
+    "test": "node ../../process/assets-runner.mjs"
+  }
+}
